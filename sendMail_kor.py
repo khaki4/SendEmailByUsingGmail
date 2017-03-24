@@ -22,7 +22,7 @@ def send_gmail(to, subject, text, html, attach):
     msg.attach(MIMEText(text, 'plain', 'utf-8'))
     msg.attach(MIMEText(html, 'html', 'utf-8'))
     
-    # comment when 
+    # comment when doesn't exist attachment file
     part=MIMEBase('application','octet-stream') 
     part.set_payload(open(attach, 'rb').read()) 
     Encoders.encode_base64(part) 
